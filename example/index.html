@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="utf-8">
+    <title>Waktu Solat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="screen">
+        <section class="zones">
+            <h1>Zon</h1>
+            <ul id="zone-list" class="zone-list"></ul>
+            <p class="hint">▲ ▼ pilih zon · OK papar · ↩ keluar</p>
+        </section>
+        <section class="today">
+            <div class="clock" id="clock">--:--</div>
+            <div class="meta" id="meta">Memuatkan…</div>
+            <ul class="times" id="times"></ul>
+            <p class="notice" id="notice" hidden></p>
+            <p class="error" id="error" hidden></p>
+        </section>
+    </main>
+    <!-- Optional: add LG's webOSTV.js (from webostv.developer.lge.com) before this line
+         to get webOS.platformBack() and webOS.systemInfo. The app works without it. -->
+    <!-- Classic scripts only: <script type="module"> is blocked in packaged apps (file://). -->
+    <script src="lib/waktu-solat.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; }
+body {
+    background: #0d1b1e;
+    color: #f2efe6;
+    font-family: "LG Smart UI", "Museo Sans", Arial, sans-serif;
+}
+.screen { display: -webkit-box; display: flex; height: 100%; padding: 72px 96px; }
+.zones { width: 640px; padding-right: 64px; border-right: 2px solid #23393d; }
+.zones h1 { font-size: 40px; font-weight: 600; color: #8fb8a8; margin-bottom: 24px; }
+.zone-list { list-style: none; height: 820px; overflow: hidden; }
+.zone-list li { padding: 14px 24px; font-size: 30px; border-radius: 12px; color: #c9d4cf; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+.zone-list li .code { display: inline-block; width: 140px; font-weight: 600; color: #f2efe6; }
+.zone-list li.selected { background: #e0b354; color: #0d1b1e; }
+.zone-list li.selected .code { color: #0d1b1e; }
+.zone-list li.active .code:after { content: " •"; }
+.hint { margin-top: 20px; font-size: 24px; color: #6f8a83; }
+.today { -webkit-box-flex: 1; flex: 1; padding-left: 96px; }
+.clock { font-size: 160px; font-weight: 300; letter-spacing: 2px; }
+.meta { font-size: 32px; color: #8fb8a8; margin: 8px 0 48px; }
+.times { list-style: none; }
+.times li { display: -webkit-box; display: flex; -webkit-box-pack: justify; justify-content: space-between; padding: 18px 28px; font-size: 44px; border-radius: 14px; }
+.times li.next { background: #1f3a33; color: #e0b354; }
+.notice { margin-top: 28px; font-size: 26px; color: #c9b27a; }
+.error { margin-top: 28px; font-size: 30px; color: #f08a7a; }

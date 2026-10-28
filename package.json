@@ -1,0 +1,74 @@
+{
+  "name": "waktu-solat-webos",
+  "version": "1.0.0",
+  "description": "Malaysia prayer times (waktu solat) API client for LG webOS TV web apps, browsers and Node.js. ES5, works with Enact and any framework.",
+  "keywords": [
+    "waktu-solat",
+    "prayer-times",
+    "solat",
+    "malaysia",
+    "jakim",
+    "islamic",
+    "webos",
+    "webostv",
+    "lg",
+    "lg-tv",
+    "smart-tv",
+    "enact",
+    "browser",
+    "typescript"
+  ],
+  "homepage": "https://github.com/apkdmg/waktu_solat_webos#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apkdmg/waktu_solat_webos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apkdmg/waktu_solat_webos/issues"
+  },
+  "license": "MIT",
+  "author": "apkdmg",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "unpkg": "./dist/waktu-solat.min.js",
+  "jsdelivr": "./dist/waktu-solat.min.js",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./webos": {
+      "types": "./dist/types/webos.d.ts",
+      "import": "./dist/webos.mjs",
+      "require": "./dist/webos.cjs"
+    },
+    "./browser": "./dist/waktu-solat.min.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "rollup -c && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:live": "LIVE=1 vitest run test/live.test.ts",
+    "check:es5": "node scripts/check-es5.mjs",
+    "example": "npm run build && node scripts/copy-to-example.mjs",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build && npm run check:es5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "1.0.2",
+    "@rollup/plugin-typescript": "12.3.1",
+    "acorn": "8.19.0",
+    "rollup": "4.66.0",
+    "tslib": "2.8.1",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5"
+  }
+}
